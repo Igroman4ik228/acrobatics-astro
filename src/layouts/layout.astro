@@ -1,0 +1,58 @@
+---
+import cls from './layout.module.scss';
+---
+
+<!doctype html>
+<html lang='ru'>
+	<head>
+		<!-- Совместимость с IE -->
+		<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+
+		<meta charset='UTF-8' />
+
+		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+
+		<title>Акробатика для детей 3-8 лет</title>
+
+		<!-- Favicon -->
+		<link rel='icon' type='image/x-icon' href='./img/favicons/favicon.ico' />
+		<link rel='apple-touch-icon' href='./img/favicons/apple-touch-icon.png' />
+
+		<!-- SEO метатеги -->
+		<!-- Описание страницы -->
+		<meta
+			name='description'
+			content='Спортивная секция акробатики для детей 3-8 лет с тренерами Светланой и Софией. Первое занятие бесплатно! Запись онлайн через WhatsApp или Telegram.'
+		/>
+		<!-- Ключевые слова -->
+		<meta
+			name='keywords'
+			content='акробатика, спортивная секция, дети, тренировки, спорт, фристайл, гимнастика'
+		/>
+		<!-- Автор -->
+		<meta name='author' content='Acrobatics' />
+
+		<meta name='apple-mobile-web-app-title' content='Acrobatics' />
+		<meta name='mobile-web-app-capable' content='yes' />
+
+		<!-- Open Graph для соцсетей -->
+		<meta property='og:site_name' content='Acrobatics' />
+		<meta property='og:locale' content='ru_RU' />
+		<meta property='og:type' content='website' />
+		<meta property='og:title' content='Акробатика для детей 3-8 лет' />
+		<meta
+			property='og:description'
+			content='Спортивная секция акробатики для детей 3-8 лет. Первое занятие бесплатно!'
+		/>
+		<meta property='og:image' content='./img/og-image.jpg' />
+		<meta property='og:url' content='https://example.com' />
+		<link rel='canonical' href='https://example.com' />
+
+		<!-- Отключение форматирования номеров телефонов -->
+		<meta name='format-detection' content='telephone=no' />
+		<meta name='format-detection' content='address=no' />
+	</head>
+	<body class:list={cls.body}>
+		<slot />
+	</body>
+</html>

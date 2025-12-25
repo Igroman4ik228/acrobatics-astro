@@ -1,0 +1,37 @@
+{
+	"name": "acrobatics-astro",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"astro": "astro",
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"lint:type": "astro check",
+		"lint:type:fix": "astro check",
+		"lint:style": "stylelint \"./**/*.{css,sass,scss,astro}\" --aei",
+		"lint:style:fix": "stylelint \"./**/*.{css,sass,scss,astro}\" --aei --fix",
+		"format": "prettier . -c -u --cache",
+		"format:fix": "prettier . -w -u --cache",
+		"check": "npm run lint:type && npm run lint:style && npm run format",
+		"check:fix": "npm run lint:type:fix && npm run lint:style:fix && npm run format:fix"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.9.6",
+		"@playform/compress": "0.2.0",
+		"astro": "^5.16.6",
+		"postcss-load-config": "^6.0.1",
+		"postcss-preset-env": "^10.5.0",
+		"prettier": "^3.7.4",
+		"prettier-plugin-astro": "^0.14.1",
+		"sass": "^1.97.1",
+		"stylelint": "^16.26.1",
+		"stylelint-config-html": "^1.1.0",
+		"stylelint-config-recess-order": "^7.4.0",
+		"stylelint-config-recommended-scss": "^16.0.2",
+		"stylelint-config-standard": "^39.0.1",
+		"stylelint-order": "^7.0.0",
+		"stylelint-scss": "^6.13.0",
+		"typescript": "^5.9.3"
+	}
+}
