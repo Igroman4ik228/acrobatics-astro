@@ -1,0 +1,18 @@
+html {
+	scroll-behavior: smooth;
+	font-size: 16px;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: var(--page-bg);
+	color: var(--text-color);
+	font-family: var(--font-main);
+	line-height: var(--line-height-base);
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+}
