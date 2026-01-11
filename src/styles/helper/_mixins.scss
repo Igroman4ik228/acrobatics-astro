@@ -1,15 +1,21 @@
 @use 'variables' as *;
 
-@mixin container($max-width: 1368px, $padding: 15px) {
+@mixin container($max-width: $container-width, $padding: $container-padding) {
 	max-width: calc($max-width + $padding * 2);
 	margin: 0 auto;
 	padding: 0 $padding;
-	// TODO: add padding for tablet and phone
 }
 
 @mixin container-full {
 	max-width: 100%;
-	// TODO: add padding for tablet and phone
+}
+
+@mixin none {
+	display: none !important;
+}
+
+@mixin no-scroll {
+	overflow-y: hidden;
 }
 
 @mixin interactive-hover {
@@ -44,9 +50,9 @@
 		font-style: $font-style;
 		font-display: swap;
 		src:
+			local('#{$font-family}'),
 			url('#{$font-path}.woff2') format('woff2'),
-			url('#{$font-path}.woff') format('woff'),
-			url('#{$font-path}.ttf') format('truetype');
+			url('#{$font-path}.woff') format('woff');
 	}
 }
 
@@ -54,7 +60,7 @@
 	$font-family: $font-main,
 	$font-size: $font-size-body,
 	$line-height: $line-height-body,
-	$color: $color-text,
+	$color: var(--text-color),
 	$font-weight: 400
 ) {
 	color: $color;
@@ -64,9 +70,9 @@
 	line-height: $line-height;
 }
 
-@mixin h1($color: $color-text, $font-weight: 600) {
+@mixin h1($color: var(--text-color), $font-weight: 700) {
 	@include text-style(
-		$font-family: $font-title,
+		$font-family: $font-main,
 		$font-size: $font-size-h1,
 		$line-height: $line-height-h1,
 		$color: $color,
@@ -74,9 +80,9 @@
 	);
 }
 
-@mixin h2($color: $color-text, $font-weight: 600) {
+@mixin h2($color: var(--text-color), $font-weight: 700) {
 	@include text-style(
-		$font-family: $font-title,
+		$font-family: $font-main,
 		$font-size: $font-size-h2,
 		$line-height: $line-height-h2,
 		$color: $color,
@@ -84,9 +90,9 @@
 	);
 }
 
-@mixin h3($color: $color-text, $font-weight: 500) {
+@mixin h3($color: var(--text-color), $font-weight: 600) {
 	@include text-style(
-		$font-family: $font-title,
+		$font-family: $font-main,
 		$font-size: $font-size-h3,
 		$line-height: $line-height-h3,
 		$color: $color,
@@ -94,9 +100,9 @@
 	);
 }
 
-@mixin h4($color: $color-text, $font-weight: 500) {
+@mixin h4($color: var(--text-color), $font-weight: 500) {
 	@include text-style(
-		$font-family: $font-title,
+		$font-family: $font-main,
 		$font-size: $font-size-h4,
 		$line-height: $line-height-h4,
 		$color: $color,
@@ -104,7 +110,7 @@
 	);
 }
 
-@mixin body-text($color: $color-text, $font-weight: 400) {
+@mixin body-text($color: var(--text-color), $font-weight: 400) {
 	@include text-style(
 		$font-family: $font-main,
 		$font-size: $font-size-body,

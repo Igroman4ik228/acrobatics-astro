@@ -1,0 +1,21 @@
+.header {
+	display: flex;
+	background: linear-gradient(135deg, #5dd9d9 0%, #78a0e5 100%);
+}
+
+.container {
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: $spacing-lg;
+
+	@media (max-width: 768px) {
+		gap: 12px;
+	}
+}
+
+.logo {
+}
