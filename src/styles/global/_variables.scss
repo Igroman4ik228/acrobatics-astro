@@ -1,21 +1,9 @@
 :root {
-	/* Цветовая гамма */
-	--color-primary: #ff6b6b; /* Яркий красный - основной цвет */
-	--color-secondary: #4ecdc4; /* Бирюзовый - вспомогательный */
-	--color-accent: #ffe66d; /* Жёлтый - акценты */
-	--color-dark: #2c3e50; /* Тёмно-синий - текст */
-	--color-light: #ecf0f1; /* Светлый серый - фоны */
-	--color-white: #ffffff; /* Белый */
-	--color-success: #27ae60; /* Зелёный */
-	--color-warning: #e67e22; /* Оранжевый */
-
-	--page-bg: #ffffff;
-	--text-color: #2c3e50;
-	--accent: #ff6b6b;
-}
-
-.dark {
-	--page-bg: #1a1a2e;
-	--text-color: #ecf0f1;
-	--color-dark: #ecf0f1;
+	// Color
+	--color-bg: #ffffff;
+	--color-text: #2c3e50;
+	--color-caption: #344658;
+	--color-accent: #ffe66d;
+	--color-primary: #ff6b6b;
+	--color-secondary: #4ecdc4;
 }

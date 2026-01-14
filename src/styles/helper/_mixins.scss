@@ -60,7 +60,7 @@
 	$font-family: $font-main,
 	$font-size: $font-size-body,
 	$line-height: $line-height-body,
-	$color: var(--text-color),
+	$color: var(--color-text),
 	$font-weight: 400
 ) {
 	color: $color;
@@ -70,7 +70,7 @@
 	line-height: $line-height;
 }
 
-@mixin h1($color: var(--text-color), $font-weight: 700) {
+@mixin h1($color: var(--color-text), $font-weight: 700) {
 	@include text-style(
 		$font-family: $font-main,
 		$font-size: $font-size-h1,
@@ -80,7 +80,7 @@
 	);
 }
 
-@mixin h2($color: var(--text-color), $font-weight: 700) {
+@mixin h2($color: var(--color-text), $font-weight: 700) {
 	@include text-style(
 		$font-family: $font-main,
 		$font-size: $font-size-h2,
@@ -90,7 +90,7 @@
 	);
 }
 
-@mixin h3($color: var(--text-color), $font-weight: 600) {
+@mixin h3($color: var(--color-text), $font-weight: 600) {
 	@include text-style(
 		$font-family: $font-main,
 		$font-size: $font-size-h3,
@@ -100,7 +100,7 @@
 	);
 }
 
-@mixin h4($color: var(--text-color), $font-weight: 500) {
+@mixin h4($color: var(--color-text), $font-weight: 500) {
 	@include text-style(
 		$font-family: $font-main,
 		$font-size: $font-size-h4,
@@ -110,7 +110,7 @@
 	);
 }
 
-@mixin body-text($color: var(--text-color), $font-weight: 400) {
+@mixin body-text($color: var(--color-text), $font-weight: 400) {
 	@include text-style(
 		$font-family: $font-main,
 		$font-size: $font-size-body,
@@ -120,7 +120,7 @@
 	);
 }
 
-@mixin caption($color: $color-caption, $font-weight: 400) {
+@mixin caption($color: var(--color-caption), $font-weight: 300) {
 	@include text-style(
 		$font-family: $font-main,
 		$font-size: $font-size-caption,

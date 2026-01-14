@@ -4,6 +4,7 @@
 }
 
 .container {
+	@include container;
 }
 
 .wrapper {
