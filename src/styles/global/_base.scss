@@ -1,18 +1,25 @@
-html {
+@use '../helper' as *;
+
+html,
+body {
+	@include body-text;
+	background-color: var(--color-bg);
 	scroll-behavior: smooth;
-	font-size: 16px;
+	min-height: 100vh;
 	overflow-x: hidden;
+	text-rendering: optimizespeed;
 }
 
-body {
-	background-color: var(--page-bg);
-	color: var(--color-text);
-	font-family: var(--font-main);
-	line-height: var(--line-height-base);
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-	transition:
-		background-color 0.3s ease,
-		color 0.3s ease;
+:disabled {
+	cursor: not-allowed;
 }
+
+// a:focus-visible {
+// 	outline: 2px solid var(--color-accent);
+// 	outline-offset: 2px;
+// }
+
+// button:focus-visible {
+// 	outline: 2px solid var(--color-accent);
+// 	outline-offset: 2px;
+// }`

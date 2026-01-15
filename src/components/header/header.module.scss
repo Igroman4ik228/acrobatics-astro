@@ -1,6 +1,10 @@
 .header {
 	display: flex;
 	background: linear-gradient(135deg, #5dd9d9 0%, #78a0e5 100%);
+	box-shadow: $shadow-sm;
+	padding: $spacing-lg 0;
+	// position: sticky;
+	// inset: 0;
 }
 
 .container {
@@ -14,9 +18,30 @@
 	gap: $spacing-lg;
 
 	@media (max-width: 768px) {
-		gap: 12px;
+		gap: $spacing-md;
 	}
 }
 
 .logo {
+	@include h3(var(--color-accent));
+	transition: transform 0.3s ease;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+.nav {
+	flex: 1;
+
+	@media (max-width: 1024px) {
+		display: none;
+	}
+}
+
+.list {
+	display: flex;
+	gap: $spacing-lg;
+	justify-content: center;
+	align-items: center;
 }

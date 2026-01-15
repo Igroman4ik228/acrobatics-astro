@@ -1,110 +1,117 @@
 /* Reset and base styles  */
+
 * {
-  padding: 0px;
-  margin: 0px;
-  border: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+::before,
+::after {
+	box-sizing: inherit;
 }
 
 /* Links */
 
-a,
-a:link,
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
+:where(a, a:link, a:visited, a:hover) {
+	color: inherit;
+	font: inherit;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 /* Common */
 
-aside,
-nav,
-footer,
-header,
-section,
-main {
-  display: block;
+:where(aside, nav, footer, header, section, main) {
+	display: block;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-size: inherit;
-  font-weight: inherit;
+:where(h1, h2, h3, h4, h5, h6, p) {
+	font: inherit;
 }
 
-ul,
-ul li {
-  list-style: none;
+:where(ul, ul li) {
+	list-style: none;
 }
 
-img {
-  vertical-align: top;
+:where(img) {
+	vertical-align: top;
 }
 
-img,
-svg {
-  max-width: 100%;
-  height: auto;
+:where(img, svg, picture) {
+	max-width: 100%;
+	height: auto;
 }
 
-address {
-  font-style: normal;
+:where(svg *) {
+	transition-property: fill, stroke;
+}
+
+:where(address) {
+	font-style: normal;
+}
+
+:where(table) {
+	border-color: currentcolor;
+	border-collapse: collapse;
 }
 
 /* Form */
 
-input,
-textarea,
-button,
-select {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
+:where(textarea, input[type='file']) {
+	max-width: 100%;
 }
+
+:where(label) {
+	cursor: pointer;
+}
+
+:where(legend) {
+	display: block;
+}
+
+:where(input, textarea, button, select) {
+	color: inherit;
+	font: inherit;
+	background-color: transparent;
+}
+
+:where(button) {
+	display: inline-block;
+	background: none;
+	background-color: transparent;
+	box-shadow: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+}
+
+// input:focus,
+// input:active,
+// button:focus,
+// button:active,
+// textarea:focus {
+// 	outline: none;
+// }
 
 input::-ms-clear {
-  display: none;
+	display: none;
 }
 
-button,
-input[type="submit"] {
-  display: inline-block;
-  box-shadow: none;
-  background-color: transparent;
-  background: none;
-  cursor: pointer;
-}
+// button::-moz-focus-inner {
+// 	padding: 0;
+// 	border: 0;
+// }
 
-input:focus,
-input:active,
-button:focus,
-button:active {
-  outline: none;
-}
+/* Disable animation */
 
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-label {
-  cursor: pointer;
-}
-
-legend {
-  display: block;
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+	}
 }
