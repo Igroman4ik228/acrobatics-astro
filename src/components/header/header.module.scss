@@ -1,10 +1,13 @@
 .header {
-	display: flex;
 	background: linear-gradient(135deg, #5dd9d9 0%, #78a0e5 100%);
 	box-shadow: $shadow-sm;
 	padding: $spacing-lg 0;
-	// position: sticky;
-	// inset: 0;
+	color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
 }
 
 .container {
@@ -25,6 +28,7 @@
 .logo {
 	@include h3(var(--color-accent));
 	transition: transform 0.3s ease;
+	flex-shrink: 0;
 
 	&:hover {
 		transform: scale(1.05);
@@ -33,6 +37,7 @@
 
 .nav {
 	flex: 1;
+	font-weight: 500;
 
 	@media (max-width: 1024px) {
 		display: none;
@@ -44,4 +49,40 @@
 	gap: $spacing-lg;
 	justify-content: center;
 	align-items: center;
+
+	li a {
+		position: relative;
+		transition: all 0.3s ease;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -4px;
+			left: 0;
+			width: 0;
+			height: 2px;
+			background-color: var(--color-accent);
+			transition: width 0.3s ease;
+		}
+
+		&:hover {
+			color: var(--color-accent);
+
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.mobileNavBtn {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	background: none;
+	padding: $spacing-sm;
+
+	@media (min-width: 1024px) {
+		display: none !important;
+	}
 }
