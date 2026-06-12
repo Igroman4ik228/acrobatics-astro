@@ -1,2 +1,4 @@
 User-Agent: *
 Allow: /
+
+Sitemap: https://igroman4ik228.github.io/acrobatics-astro/sitemap-index.xml

@@ -5,6 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://igroman4ik228.github.io',
+	base: '/acrobatics-astro',
 	integrations: [playformCompress(), sitemap()],
 	compressHTML: false,
 	scopedStyleStrategy: 'class',
