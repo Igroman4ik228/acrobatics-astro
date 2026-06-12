@@ -1,4 +1,4 @@
-$container-width: 1200px;
+$container-width: 1240px;
 $container-padding: 15px;
 
 $spacing-xs: 4px;
@@ -27,6 +27,7 @@ $font-size-h3: 24px;
 $font-size-h4: 20px;
 $font-size-body: 16px;
 $font-size-caption: 14px;
+$font-size-base: 16px;
 
 $line-height-h1: 1.6;
 $line-height-h2: 1.6;
@@ -34,3 +35,27 @@ $line-height-h3: 1.6;
 $line-height-h4: 1.6;
 $line-height-body: 1.6;
 $line-height-caption: 1.6;
+$line-height-base: 1.6;
+
+/* Цветовая гамма для детской спортивной секции */
+$color-primary: #ff6b6b; /* Яркий красный - основной цвет */
+$color-secondary: #4ecdc4; /* Бирюзовый - вспомогательный */
+$color-accent: #ffe66d; /* Жёлтый - акценты */
+$color-dark: #2c3e50; /* Тёмно-синий - текст */
+$color-light: #ecf0f1; /* Светлый серый - фоны */
+$color-white: #ffffff; /* Белый */
+$color-success: #27ae60; /* Зелёный */
+$color-warning: #e67e22; /* Оранжевый */
+
+/* Фоны */
+$page-bg: #ffffff;
+$text-color: #2c3e50;
+$accent: #ff6b6b;
+
+$gradient-primary: linear-gradient(135deg, #5dd9d9 0%, #78a0e5 100%);
+$gradient-light: linear-gradient(135deg, rgb(255 107 107 / 5%) 0%, rgb(78 205 196 / 5%) 100%);
+
+/* Breakpoints */
+$laptop-size: 1199px;
+$tablet-size: 959px;
+$mobile-size: 599px;

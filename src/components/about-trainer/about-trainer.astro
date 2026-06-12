@@ -1,0 +1,133 @@
+---
+import cls from './about-trainer.module.scss';
+---
+
+<!-- О тренерах -->
+<section class={cls.section} id='about'>
+	<div class='container'>
+		<h2 class='section-title' data-aos='fade-up'>Наши тренеры</h2>
+		<div class={cls.grid}>
+			<!-- Тренер 1 -->
+
+			<div class={cls.card} data-aos='fade-up' data-aos-delay='100'>
+				<div class={cls.photo}>
+					<img
+						src='/img/trainer-svetlana.jpg'
+						alt='Тренер Светлана Корелова'
+						class={cls.img}
+					/>
+				</div>
+
+				<div class={cls.content}>
+					<h3 class={cls.name}>Карелова Светлана Юрьевна</h3>
+					<p class={cls.title}>Профессиональный тренер</p>
+
+					<p class={cls.bio}>
+						Опытный тренер с большой любовью к детскому спорту. Светлана
+						проводит групповые занятия, помогая детям развивать уверенность в
+						себе и физическую подготовку. Её методика направлена на создание
+						безопасной и веселой обучающей среды.
+					</p>
+
+					<div class={cls.achievements}>
+						<h4 class={cls.achievementsTitle}>Достижения</h4>
+						<ul class={cls.list} role='list'>
+							<li class={cls.item} role='listitem'>
+								<span class={cls.icon}>🥇</span>
+								<span class={cls.text}
+									>Мастер спорта международного класса в дисциплине «Спортивная
+									акробатика»</span
+								>
+							</li>
+							<li class={cls.item} role='listitem'>
+								<span class={cls.icon}>🏅</span>
+								<span class={cls.text}
+									>Тренер высшей категории</span
+								>
+							</li>
+							<li class={cls.item} role='listitem'>
+								<span class={cls.icon}>🏆</span>
+								<span class={cls.text}
+									>Двукратная чемпионка мира по спортивной акробатике</span
+								>
+							</li>
+							<li class={cls.item} role='listitem'>
+								<span class={cls.icon}>⭐</span>
+								<span class={cls.text}
+									>Опыт преподавания более 20 лет</span
+								>
+							</li>
+						</ul>
+					</div>
+
+					<p class={cls.specialization}>
+						<strong>Специализация:</strong> спортивная гимнастика, акробатика, групповые
+						занятия, физическая подготовка
+					</p>
+				</div>
+			</div>
+
+			<!-- Тренер 2 -->
+			<div class={cls.card} data-aos='fade-up' data-aos-delay='0'>
+				<div class={cls.photo}>
+					<img
+						src='/img/trainer-sofia.jpg'
+						alt='Тренер Софья Алексеева'
+						class={cls.img}
+					/>
+				</div>
+
+				<div class={cls.content}>
+					<h3 class={cls.name}>
+						Алексеева Софья Александровна
+					</h3>
+					<p class={cls.title}>Профессиональный тренер</p>
+
+					<p class={cls.bio}>
+						Профессиональная спортсменка с 12-летним стажем в акробатике и
+						фристайле. Помогла более 200 детям открыть в себе талант и полюбить
+						спорт. Её подход сочетает строгую дисциплину с игровой, дружеской
+						атмосферой на занятиях.
+					</p>
+
+					<div class={cls.achievements}>
+						<h4 class={cls.achievementsTitle}>Достижения</h4>
+						<ul class={cls.list} role='list'>
+							<li class={cls.item} role='listitem'>
+								<span class={cls.icon}>🏅</span>
+								<span class={cls.text}
+									>Мастер спорта международного класса в дисциплине «Лыжная
+									акробатика»</span
+								>
+							</li>
+							<li class={cls.item} role='listitem'>
+								<span class={cls.icon}>🥇</span>
+								<span class={cls.text}
+									>Признана «Прорывом года» и награждена хрустальным кубком
+									(2020)</span
+								>
+							</li>
+							<li class={cls.item} role='listitem'>
+								<span class={cls.icon}>🏆</span>
+								<span class={cls.text}
+									>Победительница первенства России</span
+								>
+							</li>
+							<li class={cls.item} role='listitem'>
+								<span class={cls.icon}>⭐</span>
+								<span class={cls.text}
+									>Призер Кубка мира, Кубка Европы и чемпионата России</span
+								>
+							</li>
+						</ul>
+					</div>
+
+					<p class={cls.specialization}>
+						<strong>Специализация:</strong> акробатика, фристайл, спортивная гимнастика,
+						парная акробатика
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

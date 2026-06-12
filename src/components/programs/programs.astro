@@ -1,0 +1,72 @@
+---
+import cls from './programs.module.scss';
+---
+
+<!-- Программа и расписание -->
+<section class={cls.section} id='programs'>
+	<div class='container'>
+		<h2 class='section-title' data-aos='fade-up'>Наша программа</h2>
+
+		<div class={cls.grid}>
+			<article
+				class={cls.card}
+				data-aos='fade-up'
+				data-aos-delay='100'
+			>
+				<div class={cls.header}>
+					<h3 class={cls.title}>Малыши</h3>
+					<span class={cls.age}>3-5 лет</span>
+				</div>
+				<p class={cls.description}>
+					Интро в спорт через игру. Развитие координации, равновесия и базовых
+					движений. Упраженйния на растяжку и укрепление мышц.
+				</p>
+				<ul class={cls.features}>
+					<li>Групповые занятия</li>
+					<li>Длительность: 60 минут</li>
+					<li>Расписание: вторник, четверг в 18:30</li>
+					<li>3000 руб./месяц</li>
+				</ul>
+				<p class={cls.note}>
+					<strong>Первое занятие бесплатно!</strong>
+				</p>
+			</article>
+
+			<article
+				class={cls.card}
+				data-aos='fade-up'
+				data-aos-delay='200'
+			>
+				<div class={cls.header}>
+					<h3 class={cls.title}>Дети</h3>
+					<span class={cls.age}>6-8 лет</span>
+				</div>
+				<p class={cls.description}>
+					Основная программа акробатики. Элементы, связки, работа на снарядах.
+					Подготовка к соревнованиям опционально.
+				</p>
+				<ul class={cls.features}>
+					<li>Групповые занятия</li>
+					<li>Длительность: 60 минут</li>
+					<li>Расписание: вторник, четверг в 18:30</li>
+					<li>3000 руб./месяц</li>
+				</ul>
+				<p class={cls.note}>
+					<strong>Первое занятие бесплатно!</strong>
+				</p>
+			</article>
+		</div>
+
+		<div class={cls.info} data-aos='fade-up'>
+			<h3>Дополнительная информация</h3>
+			<ul>
+				<li>
+					Занятия проводятся в специально оборудованном спортзале с матами и
+					страховкой
+				</li>
+				<li>Приведи двух друзей и получи скидку 15% на месячный абонемент</li>
+				<li>Бесплатное пробное занятие для новичков</li>
+			</ul>
+		</div>
+	</div>
+</section>

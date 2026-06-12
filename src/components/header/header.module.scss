@@ -1,88 +1,111 @@
 .header {
-	background: linear-gradient(135deg, #5dd9d9 0%, #78a0e5 100%);
-	box-shadow: $shadow-sm;
-	padding: $spacing-lg 0;
-	color: white;
-	position: fixed;
+	position: sticky;
 	top: 0;
-	left: 0;
 	right: 0;
+	left: 0;
 	z-index: 100;
-}
-
-.container {
-	@include container;
+	padding: $spacing-lg 0;
+	background: $gradient-primary;
+	box-shadow: $shadow-sm;
 }
 
 .wrapper {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
 	gap: $spacing-lg;
+	align-items: center;
+	justify-content: space-between;
 
-	@media (max-width: 768px) {
+	@include tablet {
 		gap: $spacing-md;
 	}
 }
 
 .logo {
-	@include h3(var(--color-accent));
-	transition: transform 0.3s ease;
 	flex-shrink: 0;
+}
+
+.logoLink {
+	display: flex;
+	gap: $spacing-sm;
+	align-items: center;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: $color-white;
+	text-decoration: none;
+	transition: transform 0.3s ease;
+
+	@include mobile {
+		font-size: 1.2rem;
+	}
 
 	&:hover {
 		transform: scale(1.05);
 	}
 }
 
+.logoAccent {
+	font-weight: 400;
+	color: $color-accent;
+}
+
 .nav {
 	flex: 1;
-	font-weight: 500;
 
-	@media (max-width: 1024px) {
+	@include laptop {
 		display: none;
 	}
 }
 
-.list {
+.navList {
 	display: flex;
 	gap: $spacing-lg;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
 
-	li a {
-		position: relative;
-		transition: all 0.3s ease;
+.navItem {
+	margin: 0;
+}
+
+.navLink {
+	position: relative;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: $color-white;
+	text-decoration: none;
+	transition: all 0.3s ease;
+
+	&::after {
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		content: '';
+		background-color: $color-accent;
+		transition: width 0.3s ease;
+	}
+
+	&:hover {
+		color: $color-accent;
 
 		&::after {
-			content: '';
-			position: absolute;
-			bottom: -4px;
-			left: 0;
-			width: 0;
-			height: 2px;
-			background-color: var(--color-accent);
-			transition: width 0.3s ease;
-		}
-
-		&:hover {
-			color: var(--color-accent);
-
-			&::after {
-				width: 100%;
-			}
+			width: 100%;
 		}
 	}
 }
 
 .mobileNavBtn {
-	display: flex;
+	display: none !important;
 	flex-direction: column;
 	gap: 4px;
-	background: none;
 	padding: $spacing-sm;
+	background: none;
 
-	@media (min-width: 1024px) {
-		display: none !important;
+	@include laptop {
+		display: flex !important;
 	}
 }

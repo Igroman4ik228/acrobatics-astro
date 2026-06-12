@@ -1,10 +1,12 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import playformCompress from '@playform/compress';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [playformCompress()],
+	site: 'https://yar-acrobatics.ru',
+	integrations: [playformCompress(), sitemap()],
 	compressHTML: false,
 	scopedStyleStrategy: 'class',
 
@@ -12,7 +14,8 @@ export default defineConfig({
 		css: {
 			preprocessorOptions: {
 				scss: {
-					additionalData: "@use '@/styles/helper' as *;",
+					additionalData: '@use "helper" as *;',
+					loadPaths: ['./src/styles'],
 				},
 			},
 		},

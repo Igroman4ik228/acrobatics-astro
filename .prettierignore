@@ -12,3 +12,6 @@ __MACOSX
 pnpm-lock.yaml
 yarn.lock
 package-lock.json
+
+# Legacy folder
+acrobatics

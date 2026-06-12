@@ -1,0 +1,63 @@
+/* Галерея */
+.section {
+	padding: $spacing-2xl 0;
+	background-color: $color-white;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: $spacing-lg;
+
+	@include tablet {
+		grid-template-columns: repeat(2, 1fr);
+		gap: $spacing-md;
+	}
+
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
+}
+
+.item {
+	position: relative;
+	margin: 0;
+	overflow: hidden;
+	cursor: pointer;
+	border-radius: 12px;
+	box-shadow: $shadow-md;
+	transition: all 0.3s ease;
+
+	&:hover {
+		box-shadow: $shadow-lg;
+		transform: scale(1.05);
+
+		.caption {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+.img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	background-color: $color-light;
+}
+
+.caption {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: $spacing-lg $spacing-md $spacing-md;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: $color-white;
+	background: linear-gradient(180deg, transparent 0%, rgb(0 0 0 / 80%) 100%);
+	opacity: 0;
+	transform: translateY(20px);
+	transition: all 0.3s ease;
+}

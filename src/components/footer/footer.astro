@@ -1,0 +1,61 @@
+---
+import cls from './footer.module.scss';
+---
+
+<footer class={cls.footer}>
+	<div class='container'>
+		<div class={cls.content}>
+			<div class={cls.section}>
+				<h3 class={cls.title}>Acrobatics</h3>
+				<p class={cls.text}>
+					Спортивная секция акробатики для детей. Профессиональное обучение в
+					дружеской атмосфере.
+				</p>
+			</div>
+
+			<div class={cls.section}>
+				<h4 class={cls.subtitle}>Навигация</h4>
+				<ul class={cls.list}>
+					<li><a href='#about' class={cls.link}>Наши тренеры</a></li>
+					<li><a href='#programs' class={cls.link}>Программа</a></li>
+					<li><a href='#gallery' class={cls.link}>Галерея</a></li>
+					<li><a href='#reviews' class={cls.link}>Отзывы</a></li>
+					<li><a href='#contacts' class={cls.link}>Контакты</a></li>
+				</ul>
+			</div>
+
+			<div class={cls.section}>
+				<h4 class={cls.subtitle}>Контакты</h4>
+				<ul class={cls.list}>
+					<li>
+						<a href='tel:+79109768999' class={cls.link}
+							>+7 (910) 976-89-99</a
+						>
+					</li>
+					<li>
+						<a
+							href='https://t.me/sonyaalekseeva'
+							class={cls.link}
+							target='_blank'
+							rel='noopener noreferrer'>Telegram</a
+						>
+					</li>
+					<li>
+						<a
+							href='https://vk.com/id215177858'
+							class={cls.link}
+							target='_blank'
+							rel='noopener noreferrer'>ВКонтакте</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class={cls.bottom}>
+			<p class={cls.copyright}>
+				&copy; 2026 Acrobatics. Все права защищены.
+			</p>
+		</div>
+	</div>
+</footer>

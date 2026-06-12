@@ -1,5 +1,15 @@
 ---
 import Header from '@/components/header/header.astro';
+import Hero from '@/components/hero/hero.astro';
+import AboutTrainer from '@/components/about-trainer/about-trainer.astro';
+import Programs from '@/components/programs/programs.astro';
+import Gallery from '@/components/gallery/gallery.astro';
+import CallToAction from '@/components/call-to-action/call-to-action.astro';
+import Reviews from '@/components/reviews/reviews.astro';
+import Contacts from '@/components/contacts/contacts.astro';
+import Footer from '@/components/footer/footer.astro';
+import MobileNav from '@/components/mobile-nav/mobile-nav.astro';
+
 import Layout from '@/layouts/layout.astro';
 
 import '@/styles/global/index.scss';
@@ -7,4 +17,17 @@ import '@/styles/global/index.scss';
 
 <Layout>
 	<Header />
+	<MobileNav />
+	<main class='main'>
+		<Hero />
+		<AboutTrainer />
+		<Programs />
+		<Gallery />
+		<CallToAction />
+		<Reviews />
+		<Contacts />
+	</main>
+	<Footer />
+
+	<script src='../scripts/index.js'></script>
 </Layout>

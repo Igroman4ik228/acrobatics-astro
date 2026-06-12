@@ -3,36 +3,35 @@ import cls from './header.module.scss';
 ---
 
 <header class={cls.header}>
-	<div class={cls.container}>
+	<div class='container'>
 		<div class={cls.wrapper}>
 			<div class={cls.logo} aria-label='Логотип Acrobatics'>
-				<a href='#' class='logo__link'>
-					<h3 class='logo__accent'>Acrobatics</h3>
+				<a href='#' class={cls.logoLink}>
+					<span class={cls.logoAccent}>Acrobatics</span>
 				</a>
 			</div>
-
 			<nav class={cls.nav} aria-label='Основная навигация'>
-				<ul class={cls.list}>
-					<li>
-						<a href='#about'>Наши тренеры</a>
+				<ul class={cls.navList}>
+					<li class={cls.navItem}>
+						<a href='#about' class={cls.navLink}>Наши тренеры</a>
 					</li>
-					<li>
-						<a href='#programs'>Программа</a>
+					<li class={cls.navItem}>
+						<a href='#programs' class={cls.navLink}>Программа</a>
 					</li>
-					<li>
-						<a href='#gallery'>Галерея</a>
+					<li class={cls.navItem}>
+						<a href='#gallery' class={cls.navLink}>Галерея</a>
 					</li>
-					<li>
-						<a href='#reviews'>Отзывы</a>
+					<li class={cls.navItem}>
+						<a href='#reviews' class={cls.navLink}>Отзывы</a>
 					</li>
-					<li>
-						<a href='#contacts'>Контакты</a>
+					<li class={cls.navItem}>
+						<a href='#contacts' class={cls.navLink}>Контакты</a>
 					</li>
 				</ul>
 			</nav>
-
 			<button
-				class={cls.mobileNavBtn}
+				id='mobile-nav-btn'
+				class={`${cls.mobileNavBtn} mobile-nav-btn`}
 				aria-label='Открыть мобильное меню'
 				aria-expanded='false'
 			>

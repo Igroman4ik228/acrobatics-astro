@@ -1,0 +1,46 @@
+---
+import cls from './hero.module.scss';
+---
+
+<!-- Герой-секция -->
+<section class={cls.section} id='hero'>
+	<div class='container'>
+		<div class={cls.content} data-aos='fade-up' data-aos-delay='100'>
+			<div>
+				<h1 class={cls.title}>Акробатика для детей</h1>
+				<h2 class={cls.subtitleBold}>Ведётся набор от 3 до 8 лет</h2>
+			</div>
+			<p class={cls.subtitle}>
+				Развивайте силу, ловкость и уверенность с профессиональным тренером
+			</p>
+			<div class={cls.freeBadge}>
+				<span class={cls.freeText}
+					>Первое занятие полностью бесплатно!</span
+				>
+			</div>
+			<div class={cls.buttons}>
+				<button
+					class='btn btn--primary'
+					data-contact-type='whatsapp'
+					aria-label='Записаться на тренировку через WhatsApp'
+				>
+					Записаться на первое занятие
+				</button>
+				<button
+					class='btn btn--secondary'
+					data-contact-type='telegram'
+					aria-label='Записаться на тренировку через Telegram'
+				>
+					Написать в Telegram
+				</button>
+			</div>
+		</div>
+		<div class={cls.imageWrapper} data-aos='fade-left' data-aos-delay='300'>
+			<img
+				src='/img/hero-banner.jpg'
+				alt='Дети на тренировке по акробатике'
+				class={cls.img}
+			/>
+		</div>
+	</div>
+</section>

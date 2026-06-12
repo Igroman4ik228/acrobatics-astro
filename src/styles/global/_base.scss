@@ -1,25 +1,100 @@
 @use '../helper' as *;
 
-html,
-body {
-	@include body-text;
-	background-color: var(--color-bg);
+html {
 	scroll-behavior: smooth;
-	min-height: 100vh;
-	overflow-x: hidden;
-	text-rendering: optimizespeed;
+	font-size: 16px;
+	overflow-x: clip;
 }
 
-:disabled {
-	cursor: not-allowed;
+body {
+	background-color: $page-bg;
+	color: $text-color;
+	font-family: $font-main;
+	line-height: $line-height-base;
+	margin: 0;
+	padding: 0;
+	overflow-x: clip;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+} /* Базовые стили для текста */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: 700;
+	line-height: 1.3;
+	color: $color-dark;
 }
 
-// a:focus-visible {
-// 	outline: 2px solid var(--color-accent);
-// 	outline-offset: 2px;
-// }
+h1 {
+	font-size: 2.5rem;
+	@include tablet {
+		font-size: 1.8rem;
+	}
+	@include mobile {
+		font-size: 1.5rem;
+	}
+}
 
-// button:focus-visible {
-// 	outline: 2px solid var(--color-accent);
-// 	outline-offset: 2px;
-// }`
+h2 {
+	font-size: 2rem;
+	@include tablet {
+		font-size: 1.5rem;
+	}
+	@include mobile {
+		font-size: 1.3rem;
+	}
+}
+
+h3 {
+	font-size: 1.5rem;
+	@include tablet {
+		font-size: 1.25rem;
+	}
+}
+
+p {
+	margin: 0 0 $spacing-md 0;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	color: $accent;
+	text-decoration: none;
+	transition: color 0.3s ease;
+
+	&:hover {
+		color: #e55252;
+	}
+}
+ul,
+ol {
+	margin: 0;
+	padding-left: $spacing-lg;
+}
+
+li {
+	margin-bottom: $spacing-sm;
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* Кнопки базовые стили */
+button {
+	font-family: $font-main;
+	cursor: pointer;
+	border: none;
+	transition: all 0.3s ease;
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+}

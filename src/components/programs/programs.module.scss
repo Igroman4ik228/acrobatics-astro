@@ -1,0 +1,143 @@
+
+.section {
+	padding: $spacing-2xl 0;
+	background: linear-gradient(
+		180deg,
+		$color-light 0%,
+		$color-white 100%
+	);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: $spacing-lg;
+	margin-bottom: $spacing-2xl;
+
+	@include tablet {
+		grid-template-columns: 1fr;
+	}
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	padding: $spacing-lg;
+	background-color: $color-white;
+	border-radius: 12px;
+	box-shadow: $shadow-md;
+	transition: all 0.3s ease;
+
+	&:hover {
+		box-shadow: $shadow-lg;
+		transform: translateY(-8px);
+	}
+}
+
+.header {
+	display: flex;
+	gap: $spacing-md;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding-bottom: $spacing-md;
+	margin-bottom: $spacing-md;
+	border-bottom: 2px solid $color-light;
+}
+
+.title {
+	flex: 1;
+	font-size: 1.3rem;
+	color: $color-primary;
+}
+
+.age {
+	padding: 4px 12px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: $color-dark;
+	white-space: nowrap;
+	background-color: $color-accent;
+	border-radius: 20px;
+}
+
+.description {
+	margin-bottom: $spacing-md;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: $color-dark;
+}
+
+.features {
+	flex-grow: 1;
+	padding: 0;
+	margin: $spacing-md 0;
+	list-style: none;
+
+	li {
+		position: relative;
+		padding-left: $spacing-md;
+		margin-bottom: $spacing-sm;
+		font-size: 0.9rem;
+		color: $color-dark;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			font-weight: bold;
+			color: $color-secondary;
+			content: '✓';
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.note {
+	padding-top: $spacing-md;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: $color-primary;
+	border-top: 2px solid $color-light;
+}
+
+.info {
+	padding: $spacing-lg;
+	background-color: $color-white;
+	border-left: 4px solid $color-secondary;
+	border-radius: 12px;
+	box-shadow: $shadow-sm;
+
+	h3 {
+		margin-top: 0;
+		margin-bottom: $spacing-md;
+		color: $color-secondary;
+	}
+
+	ul {
+		padding: 0;
+		list-style: none;
+
+		li {
+			position: relative;
+			padding-left: $spacing-lg;
+			margin-bottom: $spacing-sm;
+			font-size: 0.95rem;
+
+			&::before {
+				position: absolute;
+				left: 0;
+				font-size: 1.2rem;
+				font-weight: bold;
+				line-height: 1;
+				color: $color-secondary;
+				content: '•';
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

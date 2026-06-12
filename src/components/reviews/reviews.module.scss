@@ -1,0 +1,88 @@
+
+.section {
+	padding: $spacing-2xl 0;
+	background: $gradient-light;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: $spacing-lg;
+
+	@include tablet {
+		grid-template-columns: 1fr;
+	}
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	padding: $spacing-lg;
+	background-color: $color-white;
+	border-top: 4px solid $color-accent;
+	border-radius: 12px;
+	box-shadow: $shadow-md;
+	transition: all 0.3s ease;
+
+	&:hover {
+		box-shadow: $shadow-lg;
+		transform: translateY(-4px);
+	}
+}
+
+.header {
+	margin-bottom: $spacing-md;
+}
+
+.author {
+	margin: 0 0 $spacing-xs 0;
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: $color-dark;
+}
+
+.child {
+	margin: 0;
+	font-size: 0.9rem;
+	color: $color-dark;
+	opacity: 0.7;
+}
+
+.rating {
+	display: flex;
+	gap: 2px;
+	margin-bottom: $spacing-md;
+
+	.star {
+		font-size: 1.2rem;
+		line-height: 1;
+		color: $color-accent;
+	}
+}
+
+.text {
+	flex-grow: 1;
+	margin: 0;
+	font-size: 0.95rem;
+	font-style: italic;
+	line-height: 1.7;
+	color: $color-dark;
+
+	&::before {
+		margin-right: 4px;
+		font-size: 2rem;
+		line-height: 0.5;
+		vertical-align: -0.4em;
+		color: $color-accent;
+		content: '"';
+	}
+
+	&::after {
+		margin-left: 4px;
+		font-size: 2rem;
+		line-height: 0.5;
+		vertical-align: -0.4em;
+		color: $color-accent;
+		content: '"';
+	}
+}

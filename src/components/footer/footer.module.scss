@@ -1,0 +1,99 @@
+.footer {
+	padding: $spacing-2xl 0 $spacing-lg;
+	color: $color-white;
+	background: linear-gradient(135deg, $color-dark 0%, #1a1a2e 100%);
+}
+
+.content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: $spacing-2xl;
+	padding-bottom: $spacing-lg;
+	margin-bottom: $spacing-lg;
+	border-bottom: 1px solid rgb(255 255 255 / 10%);
+
+	@include tablet {
+		grid-template-columns: 1fr;
+		gap: $spacing-lg;
+	}
+}
+
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-md;
+}
+
+.title {
+	margin: 0 0 $spacing-md 0;
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: $color-accent;
+}
+
+.subtitle {
+	margin: 0 0 $spacing-md 0;
+	font-size: 1rem;
+	font-weight: 700;
+	color: $color-secondary;
+}
+
+.text {
+	margin: 0;
+	font-size: 0.9rem;
+	line-height: 1.6;
+	color: rgb(255 255 255 / 80%);
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-sm;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	li {
+		margin: 0;
+	}
+}
+
+.link {
+	font-size: 0.95rem;
+	color: rgb(255 255 255 / 80%);
+	text-decoration: none;
+	transition: all 0.3s ease;
+
+	&:hover {
+		color: $color-accent;
+		transform: translateX(4px);
+	}
+
+	&--small {
+		font-size: 0.85rem;
+	}
+}
+
+.bottom {
+	text-align: center;
+}
+
+.copyright {
+	margin: 0 0 $spacing-sm 0;
+	font-size: 0.85rem;
+	color: rgb(255 255 255 / 60%);
+}
+
+.legal {
+	margin: 0;
+	font-size: 0.8rem;
+	color: rgb(255 255 255 / 60%);
+
+	a {
+		color: rgb(255 255 255 / 80%);
+
+		&:hover {
+			color: $color-accent;
+		}
+	}
+}

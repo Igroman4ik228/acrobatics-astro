@@ -1,0 +1,188 @@
+@use '../helper' as *;
+
+.none {
+	display: none !important;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.no-scroll {
+	overflow: hidden !important;
+}
+
+
+
+/* Общие кнопки стили */
+.btn {
+	display: inline-block;
+	padding: 12px 24px;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	text-align: center;
+	white-space: nowrap;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	border: 2px solid transparent;
+
+	&--primary {
+		background-color: $color-primary;
+		color: $color-white;
+
+		&:hover {
+			background-color: #e55252;
+			transform: translateY(-2px);
+			box-shadow: $shadow-lg;
+		}
+
+		&:active {
+			transform: translateY(0);
+		}
+	}
+
+	&--secondary {
+		background-color: $color-secondary;
+		color: $color-white;
+
+		&:hover {
+			background-color: #3eb8af;
+			transform: translateY(-2px);
+			box-shadow: $shadow-lg;
+		}
+	}
+
+	&--outline {
+		background-color: transparent;
+		color: $color-primary;
+		border-color: $color-primary;
+
+		&:hover {
+			background-color: $color-primary;
+			color: $color-white;
+		}
+	}
+
+	&--large {
+		padding: 16px 32px;
+		font-size: 1.1rem;
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+		transform: none;
+	}
+}
+
+/* Раздел заголовков */
+.section-title {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: $spacing-2xl;
+	color: $color-dark;
+	position: relative;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 60px;
+		height: 4px;
+		background-color: $color-accent;
+		margin: $spacing-md auto 0;
+	}
+
+	@include tablet {
+		font-size: 1.5rem;
+		margin-bottom: $spacing-xl;
+	}
+}
+/* Nav Icon */
+.mobile-nav-btn {
+	$time: 0.1s;
+	$width: 24px;
+	$height: 24px;
+	$line-height: 2px;
+	$spacing: 6px;
+	$color: $color-white;
+	$radius: 2px;
+
+	height: calc($line-height * 3 + $spacing * 2);
+	width: $width;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	z-index: 999;
+
+	.nav-icon {
+		position: relative;
+		width: $width;
+		height: $line-height;
+		background-color: $color;
+		border-radius: $radius;
+		transition: background-color $time ease-in;
+	}
+
+	.nav-icon::before,
+	.nav-icon::after {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		width: $width;
+		height: $line-height;
+		border-radius: $radius;
+		background-color: $color;
+		transition:
+			transform $time ease-in,
+			top $time linear $time;
+	}
+
+	.nav-icon::before {
+		top: calc(-1 * ($line-height + $spacing));
+	}
+
+	.nav-icon::after {
+		top: calc($line-height + $spacing);
+	}
+
+	.nav-icon.nav-icon--active {
+		background-color: transparent;
+	}
+
+	.nav-icon.nav-icon--active::before,
+	.nav-icon.nav-icon--active::after {
+		top: 0;
+		transition:
+			top $time linear,
+			transform $time ease-in $time;
+	}
+
+	.nav-icon.nav-icon--active::before {
+		transform: rotate(45deg);
+	}
+
+	.nav-icon.nav-icon--active::after {
+		transform: rotate(-45deg);
+	}
+}
+
+/* Контейнер */
+
+.container {
+	@include container;
+}

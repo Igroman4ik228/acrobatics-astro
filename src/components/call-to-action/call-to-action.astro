@@ -1,0 +1,31 @@
+---
+import cls from './call-to-action.module.scss';
+---
+
+<!-- Блок "Готовы начать?" -->
+<section class={cls.section} data-aos='zoom-in' data-aos-delay='200'>
+	<div class='container'>
+		<div class={cls.content}>
+			<h2 class={cls.title}>Готовы начать?</h2>
+			<p class={cls.subtitle}>
+				Первое занятие полностью бесплатно!
+			</p>
+			<div class={cls.buttons}>
+				<button
+					class='btn btn--large btn--outline'
+					data-contact-type='whatsapp'
+					aria-label='Записаться на занятие через WhatsApp'
+				>
+					Записаться через WhatsApp
+				</button>
+				<button
+					class='btn btn--large btn--outline'
+					data-contact-type='telegram'
+					aria-label='Записаться на занятие через Telegram'
+				>
+					Написать в Telegram
+				</button>
+			</div>
+		</div>
+	</div>
+</section>

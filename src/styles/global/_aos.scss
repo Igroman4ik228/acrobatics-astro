@@ -1,0 +1,40 @@
+@use '../helper' as *;
+
+[data-aos] {
+	opacity: 0;
+	transition-property: opacity, transform;
+	transition-duration: 0.8s;
+	transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+[data-aos].aos-animate {
+	opacity: 1;
+	transform: translate(0) scale(1);
+}
+
+/* Направления анимаций */
+[data-aos='fade-up'] {
+	transform: translateY(50px);
+}
+[data-aos='fade-down'] {
+	transform: translateY(-50px);
+}
+[data-aos='fade-left'] {
+	transform: translateX(50px);
+}
+[data-aos='fade-right'] {
+	transform: translateX(-50px);
+}
+[data-aos='zoom-in'] {
+	transform: scale(0.9);
+}
+
+/* Задержки (Delay) от 50 до 3000 */
+@for $i from 1 through 30 {
+	[data-aos-delay='#{$i * 100}'] {
+		transition-delay: #{$i * 100}ms;
+	}
+	[data-aos-delay='#{$i * 100 + 50}'] {
+		transition-delay: #{$i * 100 + 50}ms;
+	}
+}
