@@ -1,4 +1,2 @@
 User-Agent: *
 Allow: /
-
-Sitemap: https://yar-acrobatics.ru/sitemap-index.xml

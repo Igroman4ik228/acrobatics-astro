@@ -5,7 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://yar-acrobatics.ru',
 	integrations: [playformCompress(), sitemap()],
 	compressHTML: false,
 	scopedStyleStrategy: 'class',
